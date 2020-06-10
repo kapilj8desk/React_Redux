@@ -29,7 +29,8 @@ function returnData(state = initialState, action) {
         filteredProviders: updatedProviders
       });
     case CLEAR_SELECTION:
-      return Object.assign({}, state, {
+      state = Object.assign({}, state, {
+        services: action.services,
         providers: action.providers,
         filteredProviders: action.providers
       });

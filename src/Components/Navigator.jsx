@@ -92,6 +92,7 @@ function Navigator(props) {
                 }}
                 id={id}
                 onClick={() => {
+                  dispatch(clearSelection());
                   dispatch(filterProviders(id));
                   services.data.forEach((value) => {
                     if(value.id === id)
